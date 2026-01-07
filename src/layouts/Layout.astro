@@ -1,0 +1,73 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Portafolio de David AR - Ingeniero Informático"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-900 text-slate-50 antialiased">
+    <header
+      class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#inicio"
+          class="text-xl font-bold text-white tracking-tight hover:text-blue-400 transition-colors"
+        >
+          David<span class="text-blue-500">.Dev</span>
+        </a>
+
+        <ul class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+          <li>
+            <a href="#sobre-mi" class="hover:text-yellow-400 transition-colors"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a href="#formacion" class="hover:text-yellow-400 transition-colors"
+              >Formación</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-yellow-400 transition-colors"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a href="#proyectos" class="hover:text-yellow-400 transition-colors"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a href="#contacto" class="hover:text-yellow-400 transition-colors"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+  }
+</style>
