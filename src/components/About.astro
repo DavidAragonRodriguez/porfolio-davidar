@@ -1,0 +1,185 @@
+---
+// src/components/About.astro
+---
+
+<section id="sobre-mi" class="py-16 bg-slate-900 relative overflow-hidden">
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-gradient-to-r from-transparent via-slate-500 to-transparent opacity-70"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center gap-2"
+    >
+      <span class="text-blue-500">&lt;</span>
+      Sobre mí
+      <span class="text-blue-500">/&gt;</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div class="space-y-6 text-lg text-slate-400 leading-relaxed">
+        <div class="flex items-center gap-2 text-slate-300 font-medium mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-blue-500"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+            <path
+              d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+            ></path>
+          </svg>
+          Manzanares, Ciudad Real, España
+        </div>
+
+        <p>
+          Me considero una persona <strong class="text-white"
+            >curiosa, empática y trabajadora</strong
+          >. Durante mi formación, he disfrutado especialmente resolviendo
+          problemas lógicos con <span class="text-yellow-400"
+            >Java y Python</span
+          > para darles una solución eficiente.
+        </p>
+
+        <p>
+          Busco un ambiente sano y distendido donde pueda aportar mi <strong
+            class="text-white">compromiso y responsabilidad</strong
+          >, mientras sigo aprendiendo de mis compañeros.
+        </p>
+
+        <p>
+          Fuera de la pantalla, me encanta desconectar <strong
+            class="text-white">viajando</strong
+          > para conocer nuevos lugares. Además, soy un apasionado del fútbol sala
+          y fiel seguidor del
+          <a
+            href="https://manzanaresfs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-400 hover:underline transition-all"
+            >Manzanares FS</a
+          >, apoyando siempre al equipo de mi pueblo dentro y fuera de la pista.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:mt-11">
+        <div
+          class="p-8 rounded-xl bg-slate-800 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-blue-900/30 flex items-center justify-center mb-4 text-blue-400 group-hover:text-blue-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Resolución de Problemas</h3>
+          <p class="text-sm text-slate-400">
+            Entender el funcionamiento para una solución ideal
+          </p>
+        </div>
+
+        <div
+          class="p-8 rounded-xl bg-slate-800 border border-slate-700/50 hover:border-yellow-400/50 transition-colors group"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-yellow-900/20 flex items-center justify-center mb-4 text-yellow-400 group-hover:text-yellow-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Trabajo en Equipo</h3>
+          <p class="text-sm text-slate-400">
+            Empatía, escucha activa y comunicación efectiva
+          </p>
+        </div>
+
+        <div
+          class="p-8 rounded-xl bg-slate-800 border border-slate-700/50 hover:border-green-400/50 transition-colors group"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-green-900/20 flex items-center justify-center mb-4 text-green-400 group-hover:text-green-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path
+                d="M12 12l3 2"></path><path d="M12 12l0 -9"></path></svg
+            >
+          </div>
+          <h3 class="text-white font-semibold mb-2">Gestión del Tiempo</h3>
+          <p class="text-sm text-slate-400">
+            Organización y enfoque a objetivos
+          </p>
+        </div>
+
+        <div
+          class="p-8 rounded-xl bg-slate-800 border border-slate-700/50 hover:border-purple-400/50 transition-colors group"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-purple-900/20 flex items-center justify-center mb-4 text-purple-400 group-hover:text-purple-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M4 5h7"></path><path d="M9 3v2c0 4.418 -2.239 8 -5 8"
+              ></path><path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path><path
+                d="M12 20l4 -9l4 9"></path><path d="M19.1 18h-6.2"></path></svg
+            >
+          </div>
+          <h3 class="text-white font-semibold mb-2">Idiomas</h3>
+          <p class="text-sm text-slate-400">
+            Español Nativo <br /> Inglés B2 (Trinity)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
