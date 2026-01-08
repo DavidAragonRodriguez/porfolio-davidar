@@ -1,43 +1,72 @@
-# Astro Starter Kit: Minimal
+# Porfolio Personal - David Aragón Rodríguez
 
-```sh
-npm create astro@latest -- --template minimal
+Este es el repositorio del código fuente de mi porfolio personal, diseñado para mostrar mi formación, habilidades y proyectos como Ingeniero Informático.
+
+## Tecnologías
+
+El proyecto está construido utilizando un stack moderno enfocado en el rendimiento:
+
+- **[Astro](https://astro.build/):** Framework web principal.
+- **[Tailwind CSS](https://tailwindcss.com/):** Framework de estilos "utility-first".
+- **[Astro Icon](https://www.astroicon.dev/):** Sistema para gestionar la iconografía.
+
+## Instalación y Uso
+
+Si quieres ejecutar este proyecto en local:
+
+1.  **Clonar e instalar dependencias:**
+
+    ```bash
+    npm install
+    ```
+
+2.  **Arrancar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+## Historial de Comandos (Setup del Proyecto)
+
+Estos son los comandos principales que se han ejecutado para configurar el entorno y las librerías actuales:
+
+```bash
+# 1. Creación del proyecto base
+npm create astro@latest
+
+# 2. Integración de Tailwind CSS
+npx astro add tailwind
+
+# 3. Instalación del componente de iconos
+npm install astro-icon
+
+# 4. Descarga de colecciones de iconos (Iconify)
+# Colección principal para lenguajes de programación
+npm install -D @iconify-json/devicon
+
+# Colección para marcas y herramientas extra (ej. VirtualBox)
+npm install -D @iconify-json/simple-icons
+
+# Colección alternativa para logos oficiales a color (opcional)
+npm install -D @iconify-json/logos
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Créditos de Iconos y Recursos
 
-## 🚀 Project Structure
+La iconografía del porfolio se gestiona de forma híbrida para asegurar la mejor calidad visual:
 
-Inside of your Astro project, you'll see the following folders and files:
+### 1. Librerías Automáticas (via Iconify)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Se utilizan las colecciones **Devicon** y **Simple Icons** para la mayoría de las tecnologías (Java, Python, .NET, etc.) a través del componente `<Icon />`.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 2. SVGs Personalizados (Inline)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Para mejorar la calidad o fidelidad de color de ciertos logotipos, se han insertado los SVG directamente en el código (`Skills.astro`). Estos iconos corresponden a:
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **C:** Logo tipo "Escudo" (Blue Shield version).
+- **Cisco Packet Tracer:** Logo oficial detallado.
+- **Scrum:** Icono esquemático circular.
+- **Visual Basic:** Se ha utilizado el SVG del set original pero insertado en bloque para control de estilos.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Hecho por **David Aragón Rodríguez** - 2026
