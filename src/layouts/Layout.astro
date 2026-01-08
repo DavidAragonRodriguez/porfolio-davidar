@@ -1,4 +1,8 @@
 ---
+// src/layouts/Layout.astro
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
 interface Props {
   title: string;
 }
@@ -18,51 +22,17 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-900 text-slate-50 antialiased">
-    <header
-      class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10"
-    >
-      <nav
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <a
-          href="#inicio"
-          class="text-xl font-bold text-white tracking-tight hover:text-blue-400 transition-colors"
-        >
-          DavidAR<span class="text-blue-500">.Dev</span>
-        </a>
 
-        <ul class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-          <li>
-            <a href="#sobre-mi" class="hover:text-yellow-400 transition-colors"
-              >Sobre mí</a
-            >
-          </li>
-          <li>
-            <a href="#formacion" class="hover:text-yellow-400 transition-colors"
-              >Formación</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="hover:text-yellow-400 transition-colors"
-              >Habilidades</a
-            >
-          </li>
-          <li>
-            <a href="#proyectos" class="hover:text-yellow-400 transition-colors"
-              >Proyectos</a
-            >
-          </li>
-          <li>
-            <a href="#contacto" class="hover:text-yellow-400 transition-colors"
-              >Contacto</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <body
+    class="bg-slate-900 text-slate-50 antialiased flex flex-col min-h-screen"
+  >
+    <Navbar />
 
-    <slot />
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
   </body>
 </html>
 

@@ -1,0 +1,20 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-slate-950 py-8 border-t border-slate-800 mt-auto">
+  <div
+    class="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4"
+  >
+    <div class="text-slate-400 text-sm text-center md:text-left">
+      <span class="font-bold text-white block mb-1">David Aragón Rodríguez</span
+      >
+      &copy; {currentYear} - Casi todos los derechos reservados.
+    </div>
+
+    <div class="text-slate-500 text-xs">
+      Hecho con <span class="text-blue-500">Astro</span>
+    </div>
+  </div>
+</footer>
