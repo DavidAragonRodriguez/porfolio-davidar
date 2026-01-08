@@ -1,0 +1,638 @@
+---
+// src/components/Skills.astro
+import { Icon } from "astro-icon/components";
+---
+
+<section id="skills" class="py-20 bg-slate-900 relative overflow-hidden">
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-gradient-to-r from-transparent via-slate-500 to-transparent opacity-70"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-white mb-16 flex items-center gap-2"
+    >
+      <span class="text-blue-500">&lt;</span>
+      Habilidades
+      <span class="text-blue-500">/&gt;</span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* LENGUAJES */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-blue-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"
+            ></path><path d="M13.5 6.5l4 4"></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">Lenguajes</h3>
+        </div>
+
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:java" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-orange-400">Java</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Intermedio-Alto</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:python" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-400">Python</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Intermedio-Alto</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:csharp" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-purple-400">C#</span>
+              <span class="block font-light opacity-90 text-xs">Intermedio</span
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#283593"
+                  fill-rule="evenodd"
+                  d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z"
+                  clip-rule="evenodd"></path><path
+                  fill="#5c6bc0"
+                  fill-rule="evenodd"
+                  d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z"
+                  clip-rule="evenodd"></path><path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z"
+                  clip-rule="evenodd"></path><path
+                  fill="#3949ab"
+                  fill-rule="evenodd"
+                  d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">C</span>
+              <span class="block font-light opacity-90 text-xs">Básico</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:visualbasic" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-[#005A9C]">Visual Basic</span>
+              <span class="block font-light opacity-90 text-xs">Básico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* WEB & BACKEND */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-green-500/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-green-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path><path
+              d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+            ></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">Web & Backend</h3>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:spring" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-green-400">Spring Boot</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Básico-Intermedio</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:angular" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-red-500">Angular</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Básico-Intermedio</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:astro" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-orange-400">Astro</span>
+              <span class="block font-light opacity-90 text-xs">Básico</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:tailwindcss" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-cyan-400">Tailwind</span>
+              <span class="block font-light opacity-90 text-xs">Básico</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:typescript" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">TypeScript</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Básico-Intermedio</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:html5" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-orange-500">HTML5</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Básico-Intermedio</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:css3" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">CSS3</span>
+              <span class="block font-light opacity-90 text-xs"
+                >Básico-Intermedio</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-white"
+            >
+              <Icon name="simple-icons:wordpress" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm">WordPress</span>
+              <span class="block font-light opacity-90 text-xs">Intermedio</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* .NET & ESCRITORIO */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-purple-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            ></path><path d="M6 8h.01"></path><path d="M9 8h.01"></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">.NET & Escritorio</h3>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:dotnetcore" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-purple-400">.NET</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-blue-400"
+            >
+              <Icon name="simple-icons:windows" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-400">WPF / UWP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* BASES DE DATOS */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-cyan-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3"
+            ></path><path d="M4 6v6c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-6"
+            ></path><path d="M4 12v6c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-6"
+            ></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">Bases de Datos</h3>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-20 h-12 transition-transform duration-300 group-hover/icon:scale-110 cursor-help"
+            >
+              <Icon name="devicon:mysql-wordmark" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-cyan-500">MySQL</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:sqlite" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-cyan-400">SQLite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SISTEMAS & SEGURIDAD */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-red-500/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-red-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"
+            ></path><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+            ></path><path d="M12 12l0 2.5"></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">Sistemas & Seguridad</h3>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:docker" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">Docker</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="simple-icons:virtualbox" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">VirtualBox</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-blue-600"
+            >
+              <Icon name="simple-icons:metasploit" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-600">Metasploit</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-blue-400"
+            >
+              <Icon name="simple-icons:wireshark" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-400">Wireshark</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-[#1BA0D7]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full"
+                viewBox="0 0 256 256"
+              >
+                <g
+                  fill="#00a0da"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                  ><g transform="scale(5.12,5.12)"
+                    ><path
+                      d="M17.91016,2.15039l17.30078,11.86914l8.28906,-7.58984zM16.66016,3.7207v7.19922c0.465,-0.042 7.25622,-0.58308 11.94922,5.16992c0,0 0.24055,0.23086 0.31055,0.38086c0,0.01 0.00977,0.01953 0.00977,0.01953c3.901,5.165 2.64802,10.99 2.54102,11.5l12.81836,-5.34961c0.37,-0.15 0.62109,-0.51992 0.62109,-0.91992v-13.87109l-8.93945,8.17969c-0.19,0.18 -0.42992,0.27148 -0.66992,0.27148c-0.2,0 -0.40031,-0.06164 -0.57031,-0.18164zM16.66016,12.91992c-6.21,0.51 -11.12109,5.74008 -11.12109,12.08008c0,6.68 5.44109,12.11914 12.12109,12.11914c2.02,0 3.91961,-0.49891 5.59961,-1.37891c0.85,-0.44 1.63938,-0.97937 2.35938,-1.60937c1.58,-1.37 2.8,-3.14016 3.5,-5.16016v-0.00977l-11.06836,4.61914c-0.13,0.05 -0.26063,0.07031 -0.39062,0.07031c-0.19,0 -0.38078,-0.05016 -0.55078,-0.16016c-0.28,-0.19 -0.44922,-0.49984 -0.44922,-0.83984zM18.66016,12.91992v3.07031l2.33984,-0.0293v-2.61133c-0.75,-0.22 -1.53984,-0.35969 -2.33984,-0.42969zM23,14.13086v1.80859l2,-0.01953v-0.56055c-0.62,-0.47 -1.29,-0.88852 -2,-1.22852zM27,17.89063v3.01953l2.07031,-0.01953c-0.39,-1.08 -0.92961,-2.09 -1.59961,-3zM25,17.91992l-2,0.01953v3.00977l2,-0.01953zM21,17.96094l-2.33984,0.0293v3l2.33984,-0.01953zM29.59961,22.88086l-2.59961,0.0293v3l2.75,-0.0293c0.03,-0.29 0.03906,-0.58086 0.03906,-0.88086c0,-0.72 -0.05945,-1.42914 -0.18945,-2.11914zM25,22.92969l-2,0.01953v3l2,-0.01953zM21,22.9707l-2.33984,0.01953v3l2.33984,-0.01953zM25,27.92969l-2,0.01953v1.39063l2,-0.83008zM21,27.9707l-2.33984,0.01953v3.16016l2.35938,-0.98047c-0.01,-0.05 -0.01953,-0.10992 -0.01953,-0.16992zM26.93945,35.64063c-0.76,0.66 -1.58852,1.24852 -2.47852,1.72852l9.76367,12.0918c0.3,0.35 0.73039,0.53906 1.15039,0.53906c0.34,0 0.6907,-0.11937 0.9707,-0.35937c0.63,-0.53 0.70969,-1.48133 0.17969,-2.11133z"
+                    ></path></g
+                  ></g
+                >
+              </svg>
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-[#1BA0D7]"
+                >Cisco Packet Tracer</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* GESTIÓN & METODOLOGÍAS */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-yellow-500/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-yellow-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z"></path><path
+              d="M12 7v5l2.5 2.5"></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">Gestión & Metodologías</h3>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:git" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-orange-500">Git</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-blue-400"
+            >
+              <svg
+                fill="#ffffff"
+                viewBox="0 0 14 14"
+                class="w-full h-full"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  d="m 9.4619768,9.6829638 c 0.0339,0.0021 0.07045,0.0064 0.107004,0.0064 0.5175422,5.29e-4 1.0356132,-0.0026 1.5531552,0.0026 0.113361,0.0011 0.147263,-0.03761 0.141436,-0.146204 -0.0074,-0.141436 -0.0016,-0.283403 -0.0016,-0.458212 0.587466,0.432256 1.155331,0.849679 1.738029,1.2787572 -0.57846,0.425899 -1.146326,0.843852 -1.738029,1.279816 0,-0.164745 0,-0.300884 0,-0.437023 0,-0.175869 0,-0.176399 -0.171101,-0.176399 -3.3091942,0 -6.6189177,0 -9.9281116,0 -0.159977,0 -0.159977,0 -0.159977,-0.161036 0,-0.349089 0.00477,-0.698178 -0.00265,-1.0467382 -0.00265,-0.113361 0.033902,-0.138788 0.1424961,-0.138258 1.7793473,0.0032 3.5586946,0.0058 5.3380423,0.0011 0.912187,-0.0026 1.632083,-0.380343 2.108306,-1.166455 0.859215,-1.419664 -0.03655,-3.279 -1.682937,-3.518436 -1.2713408,-0.184874 -2.4531579,0.668513 -2.6687561,1.961573 -0.022778,0.13455 -0.024367,0.272808 -0.03761,0.434904 0.208182,-0.02807 0.3967642,-0.05403 0.6102435,-0.08264 -0.3342566,0.646265 -0.6568593,1.270281 -0.9842296,1.902773 -0.5016498,-0.517011 -0.9958835,-1.026077 -1.478993,-1.524019 0.1213071,-0.02013 0.2823436,-0.04344 0.4417909,-0.07681 0.030194,-0.0064 0.074691,-0.05509 0.073632,-0.08317 -0.00901,-0.338495 0.014303,-0.673281 0.080518,-1.005419 0.00212,-0.01007 -0.00265,-0.02172 -0.00583,-0.04132 C 2.6136731,6.4336578 2.3138486,6.3171168 2.0420995,6.1295938 1.377824,5.6697918 1.0303242,4.8142858 1.1934796,4.0345298 c 0.1774579,-0.849679 0.8184255,-1.48482 1.6469159,-1.641618 0.5371415,-0.101178 1.0350832,-0.0048 1.4975334,0.279165 0.081578,0.05032 0.1313719,0.05774 0.1848741,-0.02966 0.031254,-0.05138 0.078399,-0.0927 0.1324314,-0.155209 0.067275,0.271219 0.1303124,0.524957 0.19282,0.778696 0.021189,0.08529 0.03761,0.172161 0.062508,0.256387 0.027016,0.09111 -5.297e-4,0.131902 -0.09694,0.125545 -0.2786355,-0.01907 -0.5578007,-0.03602 -0.8364362,-0.05456 -0.068864,-0.0048 -0.1371989,-0.01218 -0.225663,-0.02066 0.068864,-0.08687 0.1313719,-0.164745 0.1997064,-0.25003 -0.1504272,-0.114454 -0.3162313,-0.171664 -0.4889217,-0.19974 -0.8348471,-0.136669 -1.5706355,0.504828 -1.5536843,1.34974 0.012713,0.648384 0.5593899,1.227903 1.2051251,1.282995 0.083697,0.0069 0.1128314,-0.03549 0.1451447,-0.098 0.4576826,-0.878285 1.1468552,-1.499123 2.084469,-1.822255 2.1692254,-0.747973 4.4338004,0.592232 4.8517546,2.785825 0.206063,1.08011 -0.02861,2.066458 -0.6838762,2.95057 -0.01801,0.02437 -0.03443,0.05032 -0.05032,0.07628 -0.0032,0.0048 0.0011,0.0143 0.0037,0.03443 z"
+                ></path></svg
+              >
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">Scrum</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-blue-500"
+            >
+              <Icon name="devicon:trello" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">Trello</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help text-green-600"
+            >
+              <Icon name="simple-icons:microsoft" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-green-600">MS Project</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* IDEs & HERRAMIENTAS */}
+      <div
+        class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-blue-400/50 transition-all duration-300 group"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-blue-400"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+              d="M14 4l-4 16"></path></svg
+          >
+          <h3 class="text-xl font-bold text-white">IDEs & Herramientas</h3>
+        </div>
+        <div class="grid grid-cols-4 gap-6">
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:vscode" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-blue-500">VS Code</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:visualstudio" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-purple-500"
+                >Visual Studio</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2 group/icon relative">
+            <div
+              class="w-12 h-12 transition-transform duration-300 group-hover/icon:scale-125 cursor-help"
+            >
+              <Icon name="devicon:eclipse" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-950 border border-slate-600 text-white px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50"
+            >
+              <span class="font-bold text-sm text-purple-700">Eclipse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
