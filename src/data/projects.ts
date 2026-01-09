@@ -145,6 +145,34 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    title: "DetectorStrike",
+    description: "Sistema de seguridad basado en visión por computador y microservicios para la detección de armas en tiempo real. Soporta análisis desde webcam local o cámaras IP remotas, con geolocalización (OpenStreetMap) y métricas.",
+    github: "https://github.com/DavidAragonRodriguez/isi-detectorstrike",
+    tags: ["Python", "Docker", "Microservicios", "SQLite", "Linux"],
+    slides: [
+      { 
+        type: 'image', 
+        src: "/projects/detector-strike-img1.png" 
+      },
+      { 
+        type: 'image', 
+        src: "/projects/detector-strike-img2.png" 
+      },
+      { 
+        type: 'image', 
+        src: "/projects/detector-strike-img3.png" 
+      },
+      { 
+        type: 'image', 
+        src: "/projects/detector-strike-img4.png" 
+      },
+      { 
+        type: 'image', 
+        src: "/projects/detector-strike-img5.png" 
+      }
+    ],
+  },
+  {
     title: "Mi Porfolio Personal",
     description: "Diseño y desarrollo de mi marca personal web. Construida con Astro y Tailwind CSS para garantizar el máximo rendimiento y una experiencia de usuario fluida y moderna.",
     github: "https://github.com/DavidAragonRodriguez/porfolio-davidar",
