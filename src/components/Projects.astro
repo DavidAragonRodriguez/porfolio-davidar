@@ -1,0 +1,152 @@
+---
+import { Icon } from "astro-icon/components";
+
+// 1. DEFINIMOS LA INTERFAZ (El "contrato" de datos)
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  // Los marcamos con '?' porque son OPCIONALES
+  video?: string;
+  github?: string;
+  pdf?: string;
+  link?: string;
+}
+
+// 2. APLICAMOS EL TIPO AL ARRAY
+const PROJECTS: Project[] = [
+  {
+    title: "IPOkemon - Porygon2",
+    description:
+      "Aplicación de escritorio que recrea la interfaz y animaciones del Pokémon Porygon2. Desarrollada para la asignatura de Interacción Persona-Ordenador II, enfocada en UX/UI dinámica.",
+    github: "https://github.com/DavidAragonRodriguez/ipokemon-porygon2",
+    image: "/projects/porygon2-img.png",
+    video: "/projects/porygon2-demo.mp4",
+    tags: ["C#", ".NET", "XAML"],
+  },
+  /* EJEMPLO DE FUTURO PROYECTO CON PDF
+  {
+    title: "Memoria TFG",
+    description: "Investigación sobre IA...",
+    tags: ["Python", "LaTeX"],
+    image: "/projects/tfg.jpg",
+    pdf: "/projects/memoria.pdf" // <- Ahora esto es válido
+  }
+  */
+];
+
+const getAssetSrc = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  const cleanBase = base.endsWith("/") ? base : base + "/";
+  return cleanBase + cleanPath;
+};
+---
+
+<section id="proyectos" class="py-20 bg-slate-900 relative overflow-hidden">
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-gradient-to-r from-transparent via-slate-500 to-transparent opacity-70"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-white mb-16 flex items-center gap-2"
+    >
+      <span class="text-blue-500">&lt;</span>
+      Proyectos
+      <span class="text-blue-500">/&gt;</span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        PROJECTS.map((project) => (
+          <article class="group relative rounded-2xl bg-slate-800/50 border border-slate-700/50 overflow-hidden hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+            <div class="relative w-full h-48 md:h-56 bg-slate-900 overflow-hidden shrink-0">
+              {project.video ? (
+                <video
+                  src={getAssetSrc(project.video)}
+                  poster={getAssetSrc(project.image)}
+                  class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                  controls
+                  loop
+                  muted
+                  playsinline
+                />
+              ) : (
+                <img
+                  src={getAssetSrc(project.image)}
+                  alt={project.title}
+                  class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-500"
+                />
+              )}
+
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 pointer-events-none" />
+            </div>
+
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag) => (
+                  <span class="px-3 py-1 text-xs font-medium text-blue-300 bg-blue-900/30 rounded-full border border-blue-500/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                {project.title}
+              </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                {project.description}
+              </p>
+
+              <div class="mt-auto pt-4 flex flex-wrap gap-4">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-white bg-slate-700/50 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-slate-600 hover:border-slate-500"
+                  >
+                    <Icon name="simple-icons:github" class="w-4 h-4" />
+                    Código
+                  </a>
+                )}
+
+                {project.pdf && (
+                  <a
+                    href={project.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-white bg-slate-700/50 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-slate-600 hover:border-slate-500"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                      <path d="M9 9l1 0" />
+                      <path d="M9 13l6 0" />
+                      <path d="M9 17l6 0" />
+                    </svg>
+                    Ver Proyecto
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
