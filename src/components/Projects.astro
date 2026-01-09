@@ -1,41 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
+// Importamos los datos y la interfaz desde el archivo externo
+import { PROJECTS } from "../data/projects";
 
-// 1. DEFINIMOS LA INTERFAZ (El "contrato" de datos)
-interface Project {
-  title: string;
-  description: string;
-  tags: string[];
-  image: string;
-  // Los marcamos con '?' porque son OPCIONALES
-  video?: string;
-  github?: string;
-  pdf?: string;
-  link?: string;
-}
-
-// 2. APLICAMOS EL TIPO AL ARRAY
-const PROJECTS: Project[] = [
-  {
-    title: "IPOkemon - Porygon2",
-    description:
-      "Aplicación de escritorio que recrea la interfaz y animaciones del Pokémon Porygon2. Desarrollada para la asignatura de Interacción Persona-Ordenador II, enfocada en UX/UI dinámica.",
-    github: "https://github.com/DavidAragonRodriguez/ipokemon-porygon2",
-    image: "/projects/porygon2-img.png",
-    video: "/projects/porygon2-demo.mp4",
-    tags: ["C#", ".NET", "XAML"],
-  },
-  /* EJEMPLO DE FUTURO PROYECTO CON PDF
-  {
-    title: "Memoria TFG",
-    description: "Investigación sobre IA...",
-    tags: ["Python", "LaTeX"],
-    image: "/projects/tfg.jpg",
-    pdf: "/projects/memoria.pdf" // <- Ahora esto es válido
-  }
-  */
-];
-
+// Función auxiliar para rutas (se mantiene igual)
 const getAssetSrc = (path: string) => {
   const base = import.meta.env.BASE_URL;
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
@@ -61,28 +29,88 @@ const getAssetSrc = (path: string) => {
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
-        PROJECTS.map((project) => (
+        PROJECTS.map((project, index) => (
           <article class="group relative rounded-2xl bg-slate-800/50 border border-slate-700/50 overflow-hidden hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
-            <div class="relative w-full h-48 md:h-56 bg-slate-900 overflow-hidden shrink-0">
-              {project.video ? (
-                <video
-                  src={getAssetSrc(project.video)}
-                  poster={getAssetSrc(project.image)}
-                  class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-                  controls
-                  loop
-                  muted
-                  playsinline
-                />
-              ) : (
-                <img
-                  src={getAssetSrc(project.image)}
-                  alt={project.title}
-                  class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-500"
-                />
-              )}
+            {/* CARRUSEL DE MEDIA */}
+            <div
+              class="carousel relative w-full h-48 md:h-56 bg-slate-900/80 overflow-hidden shrink-0 group/carousel"
+              data-carousel-index={index}
+            >
+              <div class="slides-container w-full h-full relative">
+                {project.slides.map((slide, i) => (
+                  <div
+                    class={`slide absolute inset-0 w-full h-full transition-opacity duration-500 ${i === 0 ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+                    data-slide-index={i}
+                  >
+                    {slide.type === "video" ? (
+                      <div class="w-full h-full flex items-center justify-center bg-black">
+                        <video
+                          src={getAssetSrc(slide.src)}
+                          poster={
+                            slide.poster ? getAssetSrc(slide.poster) : undefined
+                          }
+                          class="w-full h-full object-cover"
+                          controls
+                          loop
+                          muted
+                          playsinline
+                        />
+                      </div>
+                    ) : (
+                      <div class="w-full h-full p-2 flex items-center justify-center">
+                        <img
+                          src={getAssetSrc(slide.src)}
+                          alt={`${project.title} - view ${i + 1}`}
+                          class="zoom-image w-full h-full object-contain cursor-zoom-in rounded-xl"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
 
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 pointer-events-none" />
+              {/* Controles del Carrusel (Solo si hay más de 1 slide) */}
+              {project.slides.length > 1 && (
+                <>
+                  <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-blue-600 text-white p-1.5 rounded-full z-20 transition-all opacity-0 group-hover/carousel:opacity-100 border border-slate-700 md:hidden md:group-hover/carousel:block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                  </button>
+                  <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-blue-600 text-white p-1.5 rounded-full z-20 transition-all opacity-0 group-hover/carousel:opacity-100 border border-slate-700 md:hidden md:group-hover/carousel:block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 6l6 6l-6 6" />
+                    </svg>
+                  </button>
+                  <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                    {project.slides.map((_, i) => (
+                      <div
+                        class={`indicator w-1.5 h-1.5 rounded-full transition-colors ${i === 0 ? "bg-blue-500" : "bg-slate-600"}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             <div class="p-6 flex flex-col flex-grow">
@@ -114,7 +142,6 @@ const getAssetSrc = (path: string) => {
                     Código
                   </a>
                 )}
-
                 {project.pdf && (
                   <a
                     href={project.pdf}
@@ -149,4 +176,93 @@ const getAssetSrc = (path: string) => {
       }
     </div>
   </div>
+
+  {/* MODAL ZOOM */}
+  <div
+    id="image-modal"
+    class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out"
+  >
+    <img
+      id="modal-img"
+      src=""
+      alt="Vista ampliada"
+      class="max-w-full max-h-full rounded-lg shadow-2xl object-contain"
+    />
+  </div>
 </section>
+
+<script>
+  // 1. LÓGICA DEL CARRUSEL
+  const carousels = document.querySelectorAll(".carousel");
+
+  carousels.forEach((carousel) => {
+    const slides = carousel.querySelectorAll(".slide");
+    const prevBtn = carousel.querySelector(".prev-btn");
+    const nextBtn = carousel.querySelector(".next-btn");
+    const indicators = carousel.querySelectorAll(".indicator");
+    let currentSlide = 0;
+
+    if (slides.length <= 1) return;
+
+    const updateCarousel = (index: number) => {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove("opacity-0", "z-0");
+          slide.classList.add("opacity-100", "z-10");
+          const video = slide.querySelector("video");
+          if (video) video.pause();
+        } else {
+          slide.classList.remove("opacity-100", "z-10");
+          slide.classList.add("opacity-0", "z-0");
+          const video = slide.querySelector("video");
+          if (video) video.pause();
+        }
+      });
+
+      indicators.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove("bg-slate-600");
+          dot.classList.add("bg-blue-500");
+        } else {
+          dot.classList.remove("bg-blue-500");
+          dot.classList.add("bg-slate-600");
+        }
+      });
+    };
+
+    prevBtn?.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+      updateCarousel(currentSlide);
+    });
+
+    nextBtn?.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+      updateCarousel(currentSlide);
+    });
+  });
+
+  // 2. LÓGICA DEL ZOOM (MODAL)
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img") as HTMLImageElement;
+  const triggers = document.querySelectorAll(".zoom-image");
+
+  if (modal && modalImg) {
+    triggers.forEach((img) => {
+      img.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const target = e.target as HTMLImageElement;
+        modalImg.src = target.src;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      });
+    });
+
+    modal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalImg.src = "";
+    });
+  }
+</script>
