@@ -144,7 +144,11 @@ const getAssetSrc = (path: string) => {
                 )}
                 {project.pdf && (
                   <a
-                    href={project.pdf}
+                    href={
+                      project.pdf.startsWith("/")
+                        ? getAssetSrc(project.pdf)
+                        : project.pdf
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 text-white bg-slate-700/50 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-slate-600 hover:border-slate-500"
