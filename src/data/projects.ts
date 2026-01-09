@@ -30,52 +30,6 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "Simulación Proyecto ISO II",
-    description: "Simulación integral de un proyecto de consultoría real en equipo de 6 personas. Arquitectura cliente-servidor siguiendo la metodología PUD (Proceso Unificado de Desarrollo).",
-    github: "https://github.com/DavidAragonRodriguez/2024-ISO2-BC04",
-    tags: ["Visual Paradigm", "Git", "PUD", "Ágil"],
-    slides: [
-      { 
-        type: 'image', 
-        src: "/projects/simulacion-proyecto-isoii-img.png" 
-      }
-    ],
-  },
-  {
-    title: "F1 Database Manager",
-    description: "Gestor de base de datos de Fórmula 1 con simulación de temporadas. Permite administrar pilotos, escuderías y circuitos, además de generar calendarios y resultados ficticios automáticamente.",
-    github: "https://github.com/DavidAragonRodriguez/formula1_bbdd_ficticia",
-    tags: ["MySQL", "Visual Basic", "Visual Studio"],
-    slides: [
-      { 
-        type: 'video', 
-        src: "/projects/formula1-demo.mp4", 
-        poster: "/projects/formula1-img.png" 
-      },
-      { 
-        type: 'image', 
-        src: "/projects/formula1-img.png" 
-      }
-    ],
-  },
-  {
-    title: "Sokoban",
-    description: "Implementación del juego y de diferentes estrategias de búsqueda para resolver cualquier nivel válido, calculando la secuencia de movimientos hasta encontrar la solución (si la tiene).",
-    github: "https://github.com/DavidAragonRodriguez/sokoban",
-    tags: ["Python", "Linux", "VS Code"],
-    slides: [
-      { 
-        type: 'video', 
-        src: "/projects/sokoban-demo.webm", 
-        poster: "/projects/sokoban-img.png" 
-      },
-      { 
-        type: 'image', 
-        src: "/projects/sokoban-img.png" 
-      }
-    ],
-  },
-  {
     title: "Propuesta Asociación Iker",
     description: "Propuesta de diseño y funcionalidad para la página web de la Asociación Iker, realizada en la asignatura de Comercio Electrónico, enfocada en la gestión de donaciones y tienda solidaria.",
     pdf: "/projects/asociacion-iker-doc.pdf",
@@ -128,6 +82,23 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    title: "F1 Database Manager",
+    description: "Gestor de base de datos de Fórmula 1 con simulación de temporadas. Permite administrar pilotos, escuderías y circuitos, además de generar calendarios y resultados ficticios automáticamente.",
+    github: "https://github.com/DavidAragonRodriguez/formula1_bbdd_ficticia",
+    tags: ["MySQL", "Visual Basic", "Visual Studio"],
+    slides: [
+      { 
+        type: 'video', 
+        src: "/projects/formula1-demo.mp4", 
+        poster: "/projects/formula1-img.png" 
+      },
+      { 
+        type: 'image', 
+        src: "/projects/formula1-img.png" 
+      }
+    ],
+  },
+  {
     title: "PoC CVE-2021-3129",
     description: "Explotación de la vulnerabilidad de Ejecución Remota de Código (RCE) CVE-2021-3129 en Laravel. Práctica realizada en entorno académico controlado para la asignatura de Seguridad en Sistemas Informáticos.",
     pdf: "/projects/poc-cve-2021-3129-doc.pdf",
@@ -141,6 +112,59 @@ export const PROJECTS: Project[] = [
       { 
         type: 'image', 
         src: "/projects/poc-cve-2021-3129-img.png" 
+      }
+    ],
+  },
+  {
+    title: "Sokoban",
+    description: "Implementación del juego y de diferentes estrategias de búsqueda para resolver cualquier nivel válido, calculando la secuencia de movimientos hasta encontrar la solución (si la tiene).",
+    github: "https://github.com/DavidAragonRodriguez/sokoban",
+    tags: ["Python", "Linux", "VS Code"],
+    slides: [
+      { 
+        type: 'video', 
+        src: "/projects/sokoban-demo.webm", 
+        poster: "/projects/sokoban-img.png" 
+      },
+      { 
+        type: 'image', 
+        src: "/projects/sokoban-img.png" 
+      }
+    ],
+  },
+  {
+    title: "Simulación Proyecto ISO II",
+    description: "Simulación integral de un proyecto de consultoría real en equipo de 6 personas. Arquitectura cliente-servidor siguiendo la metodología PUD (Proceso Unificado de Desarrollo).",
+    github: "https://github.com/DavidAragonRodriguez/2024-ISO2-BC04",
+    tags: ["Visual Paradigm", "Git", "PUD", "Ágil"],
+    slides: [
+      { 
+        type: 'image', 
+        src: "/projects/simulacion-proyecto-isoii-img.png" 
+      }
+    ],
+  },
+  {
+    title: "Mi Porfolio Personal",
+    description: "Diseño y desarrollo de mi marca personal web. Construida con Astro y Tailwind CSS para garantizar el máximo rendimiento y una experiencia de usuario fluida y moderna.",
+    github: "https://github.com/DavidAragonRodriguez/porfolio-davidar",
+    tags: ["Astro", "Tailwind CSS", "TypeScript"],
+    slides: [
+      { 
+        type: 'image', 
+        src: "/projects/porfolio-img.png" 
+      }
+    ],
+  },
+  {
+    title: "Gramola Digital",
+    description: "Aplicación web Full Stack que permite a los usuarios pagar para reproducir canciones en un bar. Integra la API de Spotify, Stripe para pagos simulados y Mailtrap para correos.",
+    github: "https://github.com/DavidAragonRodriguez/gramola-davidar",
+    tags: ["Java", "Spring Boot", "Angular", "TypeScript", "HTML", "CSS", "MySQL"],
+    slides: [
+      { 
+        type: 'image', 
+        src: "/projects/gramola-img.jpg" 
       }
     ],
   },
